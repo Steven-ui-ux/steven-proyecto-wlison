@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo lo que necesitas saber sobre "DogKit".</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===== BOTONES DE IDIOMA ===== -->
+        <div class="translate-buttons">
+            <button onclick="translatePage('es')">Español</button>
+            <button onclick="translatePage('en')">English</button>
+        </div>
+        <header>
+            <h1>Todo lo que necesitas saber sobre "DogKit".</h1>
+        </header>
+        
+        <div class="product-image">
+            <img src="res/2.jpg" alt="DogKit">
+        </div>
+
+        <section class="details-section">
+            <div class="detail-block">
+                <h3>¿De donde viene DogKit?</h3>
+                <p>DogKit nace de un grupo de amigos que los 3 somos dueños de perros y nosotros siempre pensamos que los perros son mas que mascotas son como amigos para nosotros o incluso hijos entonces nosotros pensamos que muchas personas tienen perros y tambien tratan de darle un buen cuidado a estos entonces se nos ocurrio crear un kit con todo lo necesario para el cuidado basico de un perro.</p>
+            </div>
+
+            <div class="detail-block">
+                <h3>¿Que incluye el Kit?</h3>
+                <p>El DogKit trae todo lo que necesitas para el cuidado basico de tu perro:</p>
+                <ul>
+                    <li>Champú especial para perros.</li>
+                    <li>Talco especial para perros.</li>
+                    <li>Un cortauñas.</li>
+                    <li>Un premio saludable.</li>
+                </ul>
+                <p>Todo esto viene junto en el mismo kit no viene nada por separado.</p>
+            </div>
+
+            <div class="detail-block">
+                <h3>Ningun producto puede dañar al perro</h3>
+                <p>Con DogKit queremos que el perro no sufra con nada ya sea alguna alergia por el champú o el talco, un mal dolor de estomago por el premio, entonces hemos hecho que ningun producto que contenga el Kit sea dañino para los perros.</p>
+            </div>
+
+            <div class="detail-block">
+                <h3>El premio saludable</h3>
+                <p>El premio saludable es una galleta hecha a base de productos naturales algunos como vegetales y pollo.</p>
+            </div>
+
+            <div class="details-actions">
+                <a href="compra.html" class="buy-button">¡Comprar este Kit Ahora!</a>
+                <a href="index.html" class="back-button">← Volver a la página principal</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; DogKit. Todos los derechos reservados.</p>
+            <p>Contacto: 8803-9346</p>
+        </footer>
+    </div>
+    <!-- ===== GOOGLE TRANSLATE SCRIPT ===== -->
+    <div id="google_translate_element"></div>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function translatePage(lang) {
+            const select = document.querySelector("select.goog-te-combo");
+            if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event("change"));
+            }
+        }
+    </script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
